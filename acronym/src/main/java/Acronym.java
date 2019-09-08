@@ -1,11 +1,20 @@
+import java.util.stream.Stream;
+
 class Acronym {
 
+    private String phrase;
+
     Acronym(String phrase) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        this.phrase = phrase;
     }
 
     String get() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return Stream.of(phrase.split("[^a-zA-Z']+"))
+            .filter(string -> !string.isEmpty())
+            .map(part -> part.charAt(0))
+            .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
+            .toString()
+            .toUpperCase();
     }
 
 }

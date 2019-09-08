@@ -1,5 +1,4 @@
 import org.junit.Test;
-import org.junit.Ignore;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,7 +11,6 @@ public class AcronymTest {
         assertEquals(expected, new Acronym(phrase).get());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void lowercaseWords() {
         String phrase = "Ruby on Rails";
@@ -20,7 +18,6 @@ public class AcronymTest {
         assertEquals(expected, new Acronym(phrase).get());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void punctuation() {
         String phrase = "First In, First Out";
@@ -28,7 +25,6 @@ public class AcronymTest {
         assertEquals(expected, new Acronym(phrase).get());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void nonAcronymAllCapsWord() {
         String phrase = "GNU Image Manipulation Program";
@@ -36,7 +32,6 @@ public class AcronymTest {
         assertEquals(expected, new Acronym(phrase).get());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void punctuationWithoutWhitespace() {
         String phrase = "Complementary metal-oxide semiconductor";
@@ -44,7 +39,6 @@ public class AcronymTest {
         assertEquals(expected, new Acronym(phrase).get());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void veryLongAbbreviation() {
         String phrase = "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me";
@@ -52,7 +46,6 @@ public class AcronymTest {
         assertEquals(expected, new Acronym(phrase).get());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void consecutiveDelimiters() {
         String phrase = "Something - I made up from thin air";
@@ -60,7 +53,6 @@ public class AcronymTest {
         assertEquals(expected, new Acronym(phrase).get());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void apostrophes() {
         String phrase = "Halley's Comet";
@@ -68,13 +60,11 @@ public class AcronymTest {
         assertEquals(expected, new Acronym(phrase).get());
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void underscoreEmphasis() {
         String phrase = "The Road _Not_ Taken";
         String expected = "TRNT";
         assertEquals(expected, new Acronym(phrase).get());
     }
-
 
 }
