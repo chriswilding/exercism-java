@@ -9,7 +9,6 @@ class RnaTranscription {
         'T', 'A'
     );
 
-
     String transcribe(String dnaStrand) {
         return dnaStrand.chars()
             .mapToObj(i -> (char)i)
