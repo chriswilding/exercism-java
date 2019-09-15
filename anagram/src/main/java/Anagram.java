@@ -8,7 +8,7 @@ public class Anagram {
 
     public Anagram(String input) {
         this.input = input;
-        this.inputCharCount = this.charCount(input);
+        this.inputCharCount = charCount(input);
     }
 
     public List<String> match(List<String> candidates) {
