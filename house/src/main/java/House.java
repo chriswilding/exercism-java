@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 class House {
-    private final List<String> things = new ArrayList<>();
-    private final List<String> verbs = new ArrayList<>();
+    private static final List<String> things = new ArrayList<>();
+    private static final List<String> verbs = new ArrayList<>();
 
-    public House() {
+    static {
         things.add("the house");
         things.add("the malt");
         things.add("the rat");
