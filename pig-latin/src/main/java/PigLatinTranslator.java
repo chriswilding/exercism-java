@@ -3,8 +3,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 class PigLatinTranslator {
-    private List<String> vowels = List.of("a", "e", "i", "o", "u", "yt", "xr", "xy");
-    private List<String> consonantClusters = List.of("thr", "sch", "th", "ch", "rh", "qu");
+    private static List<String> vowels = List.of("a", "e", "i", "o", "u", "yt", "xr", "xy");
+    private static List<String> consonantClusters = List.of("thr", "sch", "th", "ch", "rh", "qu");
 
     public String translate(String phrase) {
         var words = phrase.split(" ");
