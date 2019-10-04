@@ -1,6 +1,5 @@
 class Hamming {
-    private final String leftStrand;
-    private final String rightStrand;
+    private int hammingDistance;
 
     Hamming(String leftStrand, String rightStrand) {
         if (leftStrand.length() != rightStrand.length()) {
@@ -13,22 +12,14 @@ class Hamming {
             throw new IllegalArgumentException("leftStrand and rightStrand must be of equal length.");
         }
 
-        this.leftStrand = leftStrand;
-        this.rightStrand = rightStrand;
-    }
-
-    int getHammingDistance() {
-        var hammingDistance = 0;
-
         for (var i = 0; i < leftStrand.length(); i++) {
-            var leftNucleotide = leftStrand.charAt(i);
-            var rightNucleotide = rightStrand.charAt(i);
-
-            if (leftNucleotide != rightNucleotide) {
+            if (leftStrand.charAt(i) != rightStrand.charAt(i)) {
                 hammingDistance += 1;
             }
         }
+    }
 
+    int getHammingDistance() {
         return hammingDistance;
     }
 
