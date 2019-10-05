@@ -10,9 +10,9 @@ class NucleotideCounter {
         'T', 0
     ));
 
-    NucleotideCounter(String strand) {
-        Set<Character> validNucleotides = nucleotideCounts.keySet();
+    private Set<Character> validNucleotides = nucleotideCounts.keySet();
 
+    NucleotideCounter(String strand) {
         for (char nucleotide : strand.toCharArray()) {
             if (!validNucleotides.contains(nucleotide)) {
                 throw new IllegalArgumentException();
