@@ -12,10 +12,7 @@ class Grains {
     }
 
     BigInteger computeTotalNumberOfGrainsOnBoard() {
-        return IntStream.range(1, 65)
-                .mapToObj(this::computeNumberOfGrainsOnSquare)
-                .reduce(BigInteger::add)
-                .get();
+        return BigInteger.TWO.pow(64).subtract(BigInteger.ONE);
     }
 
 }
