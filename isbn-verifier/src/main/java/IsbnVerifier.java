@@ -1,14 +1,9 @@
 import java.util.regex.Pattern;
 
 class IsbnVerifier {
-    private static final int CODE_POINT_TEN = 88;
-
+    
     boolean isValid(String stringToVerify) {
-        var input = stringToVerify
-            .codePoints()
-            .filter(i -> Character.isDigit(i) || i == CODE_POINT_TEN)
-            .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
-            .toString();
+        var input = stringToVerify.replaceAll("[^0-9X]", "");
 
         var p = Pattern.compile("^\\d{9}[\\d|X]$");
         var m = p.matcher(input);
