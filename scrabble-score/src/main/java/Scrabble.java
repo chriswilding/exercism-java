@@ -2,7 +2,7 @@ import java.util.Map;
 
 class Scrabble {
     private int score = 0;
-    private static Map<Character, Integer> scores = Map.ofEntries(
+    private static final Map<Character, Integer> scores = Map.ofEntries(
         Map.entry('A', 1),
         Map.entry('E', 1),
         Map.entry('I', 1),
