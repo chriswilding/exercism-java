@@ -1,44 +1,35 @@
-import java.util.HashMap;
 import java.util.Map;
 
 class Scrabble {
     private int score = 0;
-    private static Map<Character, Integer> scores = new HashMap<>() {
-        {
-            put('A', 1);
-            put('E', 1);
-            put('I', 1);
-            put('O', 1);
-            put('U', 1);
-            put('L', 1);
-            put('N', 1);
-            put('R', 1);
-            put('S', 1);
-            put('T', 1);
-
-            put('D', 2);
-            put('G', 2);
-
-            put('B', 3);
-            put('C', 3);
-            put('M', 3);
-            put('P', 3);
-
-            put('F', 4);
-            put('H', 4);
-            put('V', 4);
-            put('W', 4);
-            put('Y', 4);
-
-            put('K', 5);
-
-            put('J', 8);
-            put('X', 8);
-
-            put('Q', 10);
-            put('Z', 10);
-        }
-    };
+    private static Map<Character, Integer> scores = Map.ofEntries(
+        Map.entry('A', 1),
+        Map.entry('E', 1),
+        Map.entry('I', 1),
+        Map.entry('O', 1),
+        Map.entry('U', 1),
+        Map.entry('L', 1),
+        Map.entry('N', 1),
+        Map.entry('R', 1),
+        Map.entry('S', 1),
+        Map.entry('T', 1),
+        Map.entry('D', 2),
+        Map.entry('G', 2),
+        Map.entry('B', 3),
+        Map.entry('C', 3),
+        Map.entry('M', 3),
+        Map.entry('P', 3),
+        Map.entry('F', 4),
+        Map.entry('H', 4),
+        Map.entry('V', 4),
+        Map.entry('W', 4),
+        Map.entry('Y', 4),
+        Map.entry('K', 5),
+        Map.entry('J', 8),
+        Map.entry('X', 8),
+        Map.entry('Q', 10),
+        Map.entry('Z', 10)
+    );
 
     Scrabble(String word) {
         for (var c : word.toCharArray()) {
